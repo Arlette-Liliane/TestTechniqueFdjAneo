@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { isFunction } from 'rxjs/util/isFunction';
 import {LeagueModel} from "../model/league.model";
 
 @Pipe({
