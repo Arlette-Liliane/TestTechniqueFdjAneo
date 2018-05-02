@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+      <ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="searchLigue($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-grid >
+  <ion-row *ngIf="teams !== null">
+    <ion-col *ngFor="let item of teams" col-6>
+        <ion-card class="ion-card" (click)="openPlayer(item.strTeam)" >
+                      <img src="{{item.image}}" width="50%"   />
+     
+          </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+
+
+</ion-content>
